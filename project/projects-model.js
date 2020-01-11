@@ -10,8 +10,8 @@ async function getReources(project_id) {
 return resources
 }
 async function addResource(newResoure) {
-    const [id] = awiat db('resources').insert(newResoure)
-    return db('resources').where(['id']).first()
+    const [id] = await db("resources").insert(newResoure)
+    return db("resources").where(['id']).first()
 }
 async function getProjects() {
     return db("projects")
